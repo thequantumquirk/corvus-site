@@ -37,9 +37,9 @@
 			<a href={'/#specials'} class="header">Specials</a>
 			<a href={'/#team'} class="header">Team</a>
 			<a href={'/#screenshots'} class="header">Screenshots</a>
-			<button class="lg:px-4 lg:py-2 px-2 py-1 bg-primary rounded-lg text-sm lg:text-lg"
+			<!-- <button class="lg:px-4 lg:py-2 px-2 py-1 bg-primary rounded-lg text-sm lg:text-lg"
 				>What's New</button
-			>
+			> -->
 		</div>
 		<button class="lg:hidden" on:click={() => toggleMenu()}
 			><i class="fas fa-bars text-2xl" /></button

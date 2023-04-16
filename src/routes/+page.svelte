@@ -15,7 +15,7 @@
 		<div class="mx-2">
 			<h1 class="lg:text-7xl text-3xl font-extrabold">GET THE RAVEN <br />UNLEASHED</h1>
 			<p class="lg:text-2xl text-primary font-medium lg:my-8 my-2">The Experience You Deserve</p>
-			<a href="/devices"
+			<!-- <a href="/devices"
 				><button class="bg-primary lg:text-base text-sm p-2 m-1 rounded-lg font-bold"
 					>Download Now!</button
 				></a
@@ -23,7 +23,12 @@
 			<button
 				class="lg:text-base text-sm border border-light-primary text-light-primary m-1 py-2 px-5 rounded-lg font-bold"
 				>What's New</button
+			> -->
+			<p
+				class="text-light-primary font-bold text-2xl rounded-lg border-light-primary border p-2 text-center"
 			>
+				We'll be back on track soon!
+			</p>
 		</div>
 		<img
 			class="hidden md:block"
