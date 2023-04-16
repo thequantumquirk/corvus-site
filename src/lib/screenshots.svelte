@@ -1,38 +1,8 @@
 <script>
 	// @ts-nocheck
-
-	import { onMount } from 'svelte';
-	import Swiper from 'swiper';
-	import SwiperCore, {
-		Autoplay,
-		Pagination,
-		Navigation
-	} from 'swiper'; /* importing swiper/core throws error in build */
-
-	import 'swiper/swiper.min.css';
-
-	let container, swiper, next, prev;
-	onMount(() => {
-		SwiperCore.use([Autoplay, Pagination, Navigation]);
-		swiper = new Swiper(container, {
-			slidesPerView: 3,
-			spaceBetween: 30,
-			loop: true,
-			centeredSlides: true,
-			autoplay: {
-				delay: 1000,
-				disableOnInteraction: false
-			},
-			navigation: {
-				nextEl: next,
-				prevEl: prev
-			}
-		});
-		return () => {
-			swiper.destroy();
-		};
-	});
-
+	import Carousel from 'svelte-carousel';
+	import { browser } from '$app/environment';
+	let carousel;
 	const items = [
 		{
 			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
@@ -71,24 +41,38 @@
 		>
 			Screenshots
 		</div>
-		<div class="overflow-hidden">
-			<div class="swiper-container lg:cont" bind:this={container}>
-				<div class="swiper-wrapper">
+		<div class="w-4/6 mx-auto hidden xl:block">
+			{#if browser}
+				<Carousel particlesToShow={3} particlesToScroll={2} bind:this={carousel}>
 					{#each items as item}
-						<div class="swiper-slide">
+						<div class="flex justify-center">
 							<img class="rounded-lg" src={item.image} alt="Corvus" width="250px" />
 						</div>
 					{/each}
-				</div>
-			</div>
+				</Carousel>
+			{/if}
+		</div>
+		<div class="w-3/4 mx-auto xl:hidden lg:block hidden">
+			{#if browser}
+				<Carousel particlesToShow={2} bind:this={carousel}>
+					{#each items as item}
+						<div class="flex justify-center">
+							<img class="rounded-lg" src={item.image} alt="Corvus" width="250px" />
+						</div>
+					{/each}
+				</Carousel>
+			{/if}
+		</div>
+		<div class="w-3/4 mx-auto lg:hidden block">
+			{#if browser}
+				<Carousel bind:this={carousel}>
+					{#each items as item}
+						<div class="flex justify-center">
+							<img class="rounded-lg" src={item.image} alt="Corvus" width="250px" />
+						</div>
+					{/each}
+				</Carousel>
+			{/if}
 		</div>
 	</section>
 </main>
-
-<style>
-	.cont {
-		width: clamp(13rem, 50vw, 50rem);
-		margin: 0 auto;
-		overflow: hidden;
-	}
-</style>
