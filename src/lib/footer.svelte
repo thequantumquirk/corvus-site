@@ -9,7 +9,7 @@
 		<a href="https://github.com/Corvus-Aosp" target="_blank" rel="noreferrer"
 			><img class="w-8" src="https://ik.imagekit.io/corvus/Github.svg" alt="Corvus Logo" /></a
 		>
-		<a href="upi://pay?pa=<riteshm321@oksbi" target="_blank"
+		<a href="upi://pay?pa=riteshm321@oksbi" target="_blank"
 			><img class="w-8" src="https://ik.imagekit.io/corvus/Gpay.svg" alt="Corvus Logo" /></a
 		>
 		<a href="https://paypal.me/ritzz97" target="_blank" rel="noreferrer"
