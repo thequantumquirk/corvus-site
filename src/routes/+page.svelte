@@ -25,7 +25,7 @@
 				>What's New</button
 			> -->
 			<p
-				class="text-light-primary font-bold text-2xl rounded-lg border-light-primary border p-2 text-center"
+				class="text-light-primary font-bold lg:text-2xl rounded-lg border-light-primary border p-2 text-center"
 			>
 				We'll be back on track soon!
 			</p>
