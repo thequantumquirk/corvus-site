@@ -3,7 +3,19 @@
 	import Screenshots from '$lib/screenshots.svelte';
 	import Specials from '$lib/specials.svelte';
 	import Team from '$lib/team.svelte';
+	let pageTitle = 'Corvus AOSP | GET THE RAVEN UNLEASHED';
+	let pageDescription =
+		'Experience the power of Corvus AOSP Custom ROM - a feature-packed Android ROM designed for optimal performance and customization. Unlock a new level of smartphone personalization.';
 </script>
+
+<svelte:head>
+	<title>{pageTitle}</title>
+	<meta name="description" content={pageDescription} />
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={pageDescription} />
+	<meta property="og:image" content="https://ik.imagekit.io/corvus/corvus.jpg" />
+	<meta property="og:url" content="https://www.corvusrom.com" />
+</svelte:head>
 
 <main id="hero" class="w-screen lg:pt-56 pt-36">
 	<div class="flex item-center gap-2 md:justify-around justify-between">

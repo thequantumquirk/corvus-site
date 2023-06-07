@@ -2,6 +2,10 @@
 	// @ts-nocheck
 	import { onMount } from 'svelte';
 	let deviceList = [];
+	let pageTitle = 'Corvus AOSP | Devices ';
+	let pageDescription =
+		'Experience the power of Corvus AOSP - a feature-packed Android ROM designed for optimal performance and customization. Unlock a new level of smartphone personalization.';
+
 	onMount(async () => {
 		const response = await fetch(
 			'https://raw.githubusercontent.com/CorvusRom-Devices/jenkins/main/devices.json'
@@ -11,6 +15,15 @@
 		delete deviceList['Rom Generic'];
 	});
 </script>
+
+<svelte:head>
+	<title>{pageTitle}</title>
+	<meta name="description" content={pageDescription} />
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={pageDescription} />
+	<meta property="og:image" content="https://ik.imagekit.io/corvus/corvus.jpg" />
+	<meta property="og:url" content="https://www.corvusrom.com" />
+</svelte:head>
 
 <main class="mt-48 mb-12 lg:mx-32 mx-8">
 	<h1 class="lg:text-5xl text-3xl font-bold text-center">Downloads</h1>
