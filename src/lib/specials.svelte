@@ -35,11 +35,11 @@
 <style>
 	.box-1 {
 		width: clamp(10rem, 20vw, 20rem);
-		height: clamp(5rem, 30vh, 30rem);
+		height: clamp(12rem, 30vh, 30rem);
 	}
 	.box-2 {
 		width: clamp(10rem, 20vw, 20rem);
-		height: clamp(5rem, 25vh, 20rem);
+		height: clamp(10rem, 25vh, 20rem);
 	}
 	.circle {
 		border-radius: 100%;
