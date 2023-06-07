@@ -3,35 +3,6 @@
 	import Carousel from 'svelte-carousel';
 	import { browser } from '$app/environment';
 	let carousel;
-	const items = [
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		},
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		},
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		},
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		},
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		},
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		},
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		},
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		},
-		{
-			image: 'https://ik.imagekit.io/corvus/Screenshot_20230215-091848_RavenWalls.png'
-		}
-	];
 </script>
 
 <main id="screenshots">
@@ -44,9 +15,14 @@
 		<div class="w-4/6 mx-auto hidden xl:block">
 			{#if browser}
 				<Carousel particlesToShow={3} particlesToScroll={2} bind:this={carousel}>
-					{#each items as item}
+					{#each { length: 14 } as _, index}
 						<div class="flex justify-center">
-							<img class="rounded-lg" src={item.image} alt="Corvus" width="250px" />
+							<img
+								class="rounded-lg"
+								src="https://ik.imagekit.io/corvus/corvus_{index + 1}.jpg"
+								alt="Corvus"
+								width="250px"
+							/>
 						</div>
 					{/each}
 				</Carousel>
@@ -55,9 +31,14 @@
 		<div class="w-3/4 mx-auto xl:hidden lg:block hidden">
 			{#if browser}
 				<Carousel particlesToShow={2} bind:this={carousel}>
-					{#each items as item}
+					{#each { length: 14 } as _, index}
 						<div class="flex justify-center">
-							<img class="rounded-lg" src={item.image} alt="Corvus" width="250px" />
+							<img
+								class="rounded-lg"
+								src="https://ik.imagekit.io/corvus/corvus_{index + 1}.jpg"
+								alt="Corvus"
+								width="250px"
+							/>
 						</div>
 					{/each}
 				</Carousel>
@@ -66,9 +47,14 @@
 		<div class="w-3/4 mx-auto lg:hidden block">
 			{#if browser}
 				<Carousel bind:this={carousel}>
-					{#each items as item}
+					{#each { length: 14 } as _, index}
 						<div class="flex justify-center">
-							<img class="rounded-lg" src={item.image} alt="Corvus" width="250px" />
+							<img
+								class="rounded-lg"
+								src="https://ik.imagekit.io/corvus/corvus_{index + 1}.jpg"
+								alt="Corvus"
+								width="250px"
+							/>
 						</div>
 					{/each}
 				</Carousel>
